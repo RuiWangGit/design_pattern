@@ -1,5 +1,8 @@
 
 var repo = {
+
+	var db = {};
+
 	get: function (id) {
 		console.log('Getting task ' + id);
 		return {
@@ -9,6 +12,8 @@ var repo = {
 	save: function (task) {
 		console.log('Saving ' + task.name + ' to the db');
 	}
+
+	console.log('newing a new task repo')
 }
 
 repo.execute = function(name) {
@@ -18,6 +23,8 @@ repo.execute = function(name) {
 	}
 	return false;
 }
+
+module.export = repo;
 
 
 var tmp = '';
